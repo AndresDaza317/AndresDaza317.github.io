@@ -1,0 +1,51 @@
+body{
+    background-color:rgb(0, 255, 64);
+}
+h1{ 
+    color: rgb(33, 16, 188) ;
+}
+
+h2{
+    color: blueviolet;
+    background-color: aqua;
+}
+p{
+    color: brown;
+
+}
+
+a{
+    color: black;
+}
+
+.principal{
+    color:red;
+}
+
+.segundo{
+    
+}
+
+#titulo1{
+    color:rgb(255, 0, 0);
+    font-size: 60px;
+    background-color: rgb(106, 106, 245);
+}
+
+.secundaria{
+    color: greenyellow;
+    background-color: orange;
+}
+
+.caja {
+    width: 500px;
+    height: 250px;
+    margin: 20px;
+    padding: 100px;
+    border: 10px solid red;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-around;
+}
