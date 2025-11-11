@@ -1,92 +1,275 @@
-body{background-color: rgb(139, 243, 168);}
-
-
-h1{color: rgb(224, 6, 6);background-color: beige;}
-p{color: rgb(76, 7, 7);}
-h2{color: rgb(238, 21, 64);}
-
-.principal{
-    color: purple; font-family: cursive, sans-serif;}
-     
-
-.secundaria{
-    color: mediumorchid; font-family: cursive, sans-serif;}
-
-#titulo1{
-    font-size: 30px;
-    font-family: cursive, sans-serif;
+/* ===== ESTILOS BÁSICOS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
-.caja {
-    width: 400px;
-    height: 400px;
-    margin: 50px;
-    padding-left: 200px;
-    border: 10px solid black;
 
+body {
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
 }
-.contenedor{
+
+/* ===== HEADER ===== */
+header {
+  background-color: #000;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 10px 30px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5em;
+  color: #ffcc00;
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* ===== INICIO ===== */
+.inicio {
+    background: url('https://www.americansportandfitness.com/cdn/shop/products/personal-trainer.jpg?v=1586368428&width=1680') center/cover no-repeat;
+    color: black;
+    padding: 400px 20px;
+}
+
+.inicio span {
+    color: #ffcc00;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: #fff;
+}
+
+/* ===== SOBRE MÍ ===== */
+.sobre {
+    position: relative;
+    padding: 300;
+    color: white;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.video-container .overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
 }
-.grid-container{
-    display: grid;
-    grid-template-columns: auto 200px auto auto;
+
+.video-container h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+/* ===== PLANES ===== */
+.planes {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: white;
+    padding: 225px 20px;
+    overflow: hidden;
+}
+
+/* Capa oscura encima de la imagen para mejor contraste */
+.planes::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Asegura que el contenido quede por encima del fondo */
+.planes h2,
+.planes .planes-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.planes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.plan {
+    background: rgba(34, 34, 34, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+.plan.destacado {
+    border: 2px solid #ffcc00;
+}
+
+.plan button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plan button:hover {
+    background: #fff;
+}
+/* ===== TESTIMONIOS ===== */
+.testimonios {
+  background: #111;
+  color: white;
+  padding: 120px 20px;
+}
+
+.contenedor-testimonios {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap; /* se ajusta si la pantalla es pequeña */
+  margin-top: 40px;
+}
+
+.testimonio {
+  background: #222;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.testimonio img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ffcc00;
+}
+
+.testimonio p {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonio h4 {
+  color: #ffcc00;
+  margin-top: 10px;
+}
+
+/* ===== CONTACTO ===== */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
-.grid-item{
-    background-color: azure;
-    padding: 20px;
-    border: 10px dotted blue; 
+.contacto input,
+.contacto textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
-.grid-item :hover{
-    background-color: rgb(255, 0, 225);
-    font-size: x-large;
+.contacto button {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.grid-item:hover {
-    background-color: darkblue;
-    animation: mover 0ms;
+.contacto button:hover {
+    background: #fff;
 }
 
-@keyframes mover {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(100px); }
+/* ===== FOOTER ===== */
+footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
 }
-
-@keyframes girar {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-    100% { transform: rotate(360deg); }
-}
-div {
-    animation: girar 2s;
-}
-
-
-   table {
-        color: rgb(1, 1, 6); 
-        background-color: lightblue;
-        width: 50%;
-        border-collapse: collapse orange;
-    }
-    th, td {
-        padding: 15px;
-        border: 1px solid #040804;
-        text-align: left;
-    }
-    th {
-        background-color: #10d7d0;
-    }   
-
-
-form {
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center
-    margin-right: 25%;
-    margin-left: 25%;
-}
-
