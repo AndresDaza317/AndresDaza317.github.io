@@ -1,62 +1,88 @@
+/* Fondo general */
 body {
-  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg");
-  background-size: cover; /* Hace que cubra toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que se repita */
-  background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+  font-family: Arial, sans-serif;
+  background-image: url(https://img.freepik.com/foto-gratis/vista-angulo-hombre-musculoso-irreconocible-preparandose-levantar-barra-club-salud_637285-2497.jpg?semt=ais_hybrid&w=740&q=80);
+  background-size: cover;   /* hace que la imagen cubra toda la pantalla */
+  background-repeat: no-repeat; /* evita que se repita */
+  background-position: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa toda la pantalla */
+  margin: 0;
+}
+
+/* Contenedor del formulario */
+.contenedor {
+  background: #ffffff;
+  padding: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  width: 350px;
+  text-align: center;
+}
+.row {
+  display: flex;        /* activa flexbox */
+  gap: 20px;            /* espacio entre los campos */
+}
+
+.campo {
+  flex: 1;              /* cada campo ocupa el mismo ancho */
+}
+
+.gif-esquina {
+  position: fixed;       /* se queda fijo aunque hagas scroll */
+  bottom: 20px;          /* distancia desde abajo */
+  right: 20px;           /* distancia desde la derecha */
+  width: 150px;          /* tamaño del gif */
+  height: auto;          /* mantiene proporción */
+  z-index: 1000;         /* se asegura de estar encima de otros elementos */
 }
 
 
-h1{
-    color: red;
+
+/* Título */
+.contenedor h1 {
+  margin-bottom: 20px;
+  color: #9f3800;
+  padding: 10px;
 }
 
-
-
-table{
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 20%; 
+/* Formulario en cuadrícula */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; /* espacio entre elementos */
 }
 
-tr,td{
-    border: 1px solid black;
-}   
-
-#tablas{
-    display: flex;
-    grid-template-columns: auto auto auto auto auto auto ;
-    gap: 40px;
-    width: 60%;
-    height: 100px;
-    flex-wrap:wrap;
-    padding: 50px;
+/* Etiquetas alineadas */
+label {
+  text-align: left;
+  font-weight: bold;
+  color: #080303;
 }
 
-h1{
-    color: red;
+/* Campos de entrada */
+input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #030000;
+  border-radius: 6px;
+  margin-bottom: 20px; /* separa cada campo hacia abajo */
 }
 
-
-caption {
-      background-color: #0d47a1;
-      color: white;
-      font-weight: bold;
-      padding: 8px;
-      text-transform: uppercase;
-      font-size: 16px;
-    }
-
-.highlight{
-    background-color: rgb(43, 7, 126);
-    width:60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    font-size: 30px;
+/* Botón */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
-.formulario{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+button:hover {
+  background-color: #45a049;
 }
