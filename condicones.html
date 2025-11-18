@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <input type="text" name="edad" id="edad">
+    <button onclick="evaluar()">evaluar</button>
+  
+
+    <script>
+        function evaluar(){
+            let edad = document.getElementById("edad").value
+            if (edad == ""){
+                alert("debes ingresar un valor")
+                return false;
+            }
+            if (edad >= 18 && edad <= 60) {
+                alert("Eres mayor de edad");
+            } else   if (edad >= 60){
+                alert("Eres un viejo")
+            } else {
+                alert("Eres menor de edad");
+
+            }
+        }
+    </script>
+     
+    <p>dias de la semana</p>
+    <input type="text" name="semana" id="dia">
+    <button onclick="semana()">averigua</button>
+    <script>
+    function semana() {
+    let dia = parseInt(document.getElementById("dia").value); 
+
+    switch (dia) {
+        case 1:
+            console.log("Lunes")
+            break;
+        case 2:
+            console.log("Martes")
+            break;
+        case 3:
+            console.log("Miércoles")
+            break;
+        case 4:
+            console.log("jueves")
+            break;
+        case 5:
+            console.log("viernes")
+            break;
+        case 6:
+            console.log("sabado")
+            break;
+        case 7:
+            console.log("domingo")
+            break;
+        default:
+            console.log("Día no válido")
+    }
+    }
+        
+    </script>
+    </body>
+    </html>

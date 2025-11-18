@@ -7,30 +7,22 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div id="tablas"> </div>
-    <tabe>
+<table>
 
-    </table>
-    <script>
-    midiv = document.getElementById("tablas");
-    for (let j = 1; j <= 10; j++) {
-    const table = document.createElement("table");
+</table>
+<script>
+    const table = document.querySelector("table");
     for (let i = 1; i<= 10; i++) {
-        const fila  = document.createElement("tr"); 
+        const fila  = document.createElement("tr");
         const col1 = document.createElement("td");
         const col2 = document.createElement("td");
-     
-
-        col1.textContent = j + " * " + i + " = ";
-        col2.textContent = j * i
-    
+        col1.textContent = "2 * " +i
+        col2.textContent = 2 * i
         fila.appendChild(col1);
         fila.appendChild(col2);
         table.appendChild(fila);
     }
-    midiv.appendChild(table);
-    }
-    </script>
+</script>
     
 </body>
 </html>

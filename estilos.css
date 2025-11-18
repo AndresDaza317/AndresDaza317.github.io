@@ -1,275 +1,62 @@
-/* ===== ESTILOS BÁSICOS ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-}
-
 body {
-    background-color: #111;
-    color: #eee;
-    line-height: 1.6;
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-abstract-cloudy-background-beautiful-natural-streaks-of-sky-and-clouds-red-image_15684333.jpg");
+  background-size: cover; /* Hace que cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
 }
 
-/* ===== HEADER ===== */
-header {
-  background-color: #000;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 10px 30px;
+
+h1{
+    color: red;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 20%; 
 }
 
-header h1 {
-  font-size: 1.5em;
-  color: #ffcc00;
-  margin: 0;
-}
+tr,td{
+    border: 1px solid black;
+}   
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ffcc00;
-}
-
-/* ===== SECCIONES ===== */
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-h2 {
-    color: #ffcc00;
-    margin-bottom: 20px;
-}
-
-/* ===== INICIO ===== */
-.inicio {
-    background: url('https://www.americansportandfitness.com/cdn/shop/products/personal-trainer.jpg?v=1586368428&width=1680') center/cover no-repeat;
-    color: black;
-    padding: 400px 20px;
-}
-
-.inicio span {
-    color: #ffcc00;
-}
-
-.boton {
-    display: inline-block;
-    margin-top: 20px;
-    background: #ffcc00;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.boton:hover {
-    background: #fff;
-}
-
-/* ===== SOBRE MÍ ===== */
-.sobre {
-    position: relative;
-    padding: 300;
-    color: white;
-    overflow: hidden;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-.video-container video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-.video-container .overlay {
-    position: relative;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.5);
-    height: 100%;
+#tablas{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-}
-
-.video-container h2 {
-    color: #ffcc00;
-    margin-bottom: 15px;
-}
-/* ===== PLANES ===== */
-.planes {
-    position: relative;
-    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-    color: white;
-    padding: 225px 20px;
-    overflow: hidden;
-}
-
-/* Capa oscura encima de la imagen para mejor contraste */
-.planes::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 0;
-}
-
-/* Asegura que el contenido quede por encima del fondo */
-.planes h2,
-.planes .planes-grid {
-    position: relative;
-    z-index: 1;
-}
-
-.planes-grid {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    grid-template-columns: auto auto auto auto auto auto ;
+    gap: 40px;
+    width: 60%;
+    height: 100px;
+    flex-wrap:wrap;
     padding: 50px;
 }
 
-.plan {
-    background: rgba(34, 34, 34, 0.85);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    width: 280px;
-    transition: 0.5s;
+h1{
+    color: red;
 }
 
-.plan:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+
+caption {
+      background-color: #0d47a1;
+      color: white;
+      font-weight: bold;
+      padding: 8px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+.highlight{
+    background-color: rgb(43, 7, 126);
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 30px;
 }
 
-.plan.destacado {
-    border: 2px solid #ffcc00;
-}
-
-.plan button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #ffcc00;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.plan button:hover {
-    background: #fff;
-}
-/* ===== TESTIMONIOS ===== */
-.testimonios {
-  background: #111;
-  color: white;
-  padding: 120px 20px;
-}
-
-.contenedor-testimonios {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 30px;
-  flex-wrap: wrap; /* se ajusta si la pantalla es pequeña */
-  margin-top: 40px;
-}
-
-.testimonio {
-  background: #222;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-  transition: 0.3s;
-}
-
-.testimonio:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-.testimonio img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #ffcc00;
-}
-
-.testimonio p {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.testimonio h4 {
-  color: #ffcc00;
-  margin-top: 10px;
-}
-
-/* ===== CONTACTO ===== */
-.contacto form {
+.formulario{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.contacto input,
-.contacto textarea {
-    width: 90%;
-    max-width: 400px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.contacto button {
-    background: #ffcc00;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contacto button:hover {
-    background: #fff;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    background-color: #000;
-    color: #aaa;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
+    width: 50%;
 }
