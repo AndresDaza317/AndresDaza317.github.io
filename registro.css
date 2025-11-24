@@ -1,0 +1,108 @@
+.registro {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://img.freepik.com/foto-gratis/vista-angulo-hombre-musculoso-irreconocible-preparandose-levantar-barra-club-salud_637285-2497.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineamos todo al principio de la pantalla */
+  height: 100vh;
+  margin: 0;
+  filter: brightness(0.7); /* Mantener el filtro de brillo */
+}
+
+/* Contenedor del formulario */
+.contenedor {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 450px; /* Redujimos el ancho */
+  height: auto; /* Altura automática para que se ajuste */
+  text-align: center;
+  backdrop-filter: blur(5px); /* Filtro de desenfoque para un toque más moderno */
+}
+
+/* Título */
+.contenedor h1 {
+  margin-bottom: 30px;
+  color: #ff6f00; /* Naranja vibrante para el título */
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Formulario en cuadrícula */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px; /* Más espacio entre los campos */
+  padding: 0 20px; /* Alineamos el contenido dentro del formulario */
+}
+
+/* Etiquetas alineadas */
+label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Campos de entrada */
+input {
+  width: 100%; /* Asegura que los campos de entrada ocupen todo el ancho disponible */
+  padding: 12px;
+  border: 1px solid #4CAF50; /* Borde verde para resaltar el estilo fitness */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: #f5f5f5; /* Fondo claro para los campos */
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff6f00; /* Al hacer foco, cambia a naranja */
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(255, 111, 0, 0.8); /* Efecto de brillo */
+}
+
+/* Botón */
+button {
+  background-color: #ff6f00; /* Naranja para un botón llamativo */
+  color: white;
+  padding: 20px; /* Aumentamos el tamaño del botón */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 22px; /* Aumentamos el tamaño de la fuente */
+  width: 100%;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background-color: #ff8c1a; /* Cambia a un tono más claro al pasar el mouse */
+  transform: scale(1.1); /* Efecto de zoom más pronunciado */
+}
+
+/* Estilos para las opciones de género */
+.campo-genero .opcion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.campo-genero input[type="radio"] {
+  accent-color: #4CAF50; /* Verde para los botones de género */
+}
+
+/* GIF debajo del título (original) */
+.gif-esquina {
+  width: 150px; /* Tamaño original para el gif */
+  height: auto;
+  margin-top: 20px; /* Espacio para separarlo del título */
+  margin-bottom: 20px; /* Espacio para separarlo del formulario */
+  z-index: 1000;
+  border-radius: 10px;
+  border: 3px solid #4CAF50; /* Borde verde para el gif */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}

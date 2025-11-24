@@ -1,88 +1,392 @@
-/* Fondo general */
+/* ===== ESTILOS BÁSICOS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-image: url(https://img.freepik.com/foto-gratis/vista-angulo-hombre-musculoso-irreconocible-preparandose-levantar-barra-club-salud_637285-2497.jpg?semt=ais_hybrid&w=740&q=80);
-  background-size: cover;   /* hace que la imagen cubra toda la pantalla */
-  background-repeat: no-repeat; /* evita que se repita */
-  background-position: center; 
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+/* ===== HEADER GENERAL ===== */
+.header {
+  background: #000;
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ffcc00;
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* ===== SECCIÓN DERECHA ===== */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ===== BOTONES LOGIN Y REGISTRO ===== */
+.btn-auth {
+  padding: 7px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  background: #222;
+  color: #fff;
+  transition: 0.3s;
+  border: 1px solid #444;
+}
+
+.btn-auth:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+.register {
+  border-color: #ffcc00;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bienvenido {
+    font-weight: bold;
+    color: #ff8800; /* naranja neon */
+    font-size: 1rem;
+}
+
+.perfil {
+    background-color: #ff8800;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.perfil:hover {
+    background-color: #ff5500;
+}
+
+
+
+/* ===== ICONO HAMBURGUESA ANIMADO ===== */
+.menu-toggle {
+  width: 28px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+/* Animación cuando se activa */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== SIDEBAR MENU ===== */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 30px;
+  transition: 0.4s ease;
+  z-index: 2000;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+/* Overlay cuando abre el menú */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 1500;
+}
+
+.overlay.show {
+  display: block;
+}
+
+
+
+
+
+/* ===== SECCIONES ===== */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* ===== INICIO ===== */
+.inicio {
+    background: url('https://www.americansportandfitness.com/cdn/shop/products/personal-trainer.jpg?v=1586368428&width=1680') center/cover no-repeat;
+    color: black;
+    padding: 400px 20px;
+}
+
+.inicio span {
+    color: #ffcc00;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: #fff;
+}
+
+/* ===== SOBRE MÍ ===== */
+.sobre {
+    position: relative;
+    padding: 300;
+    color: white;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.video-container .overlay {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.video-container h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+/* ===== PLANES ===== */
+.planes {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: white;
+    padding: 225px 20px;
+    overflow: hidden;
+}
+
+/* Capa oscura encima de la imagen para mejor contraste */
+.planes::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* Asegura que el contenido quede por encima del fondo */
+.planes h2,
+.planes .planes-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.planes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.plan {
+    background: rgba(34, 34, 34, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+.plan.destacado {
+    border: 2px solid #ffcc00;
+}
+
+.plan button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffcc00;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.plan button:hover {
+    background: #fff;
+}
+/* ===== TESTIMONIOS ===== */
+.testimonios {
+  background: #111;
+  color: white;
+  padding: 120px 20px;
+}
+
+.contenedor-testimonios {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* ocupa toda la pantalla */
-  margin: 0;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap; /* se ajusta si la pantalla es pequeña */
+  margin-top: 40px;
 }
 
-/* Contenedor del formulario */
-.contenedor {
-  background: #ffffff;
-  padding: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  width: 350px;
+.testimonio {
+  background: #222;
+  border-radius: 15px;
+  padding: 20px;
   text-align: center;
-}
-.row {
-  display: flex;        /* activa flexbox */
-  gap: 20px;            /* espacio entre los campos */
+  width: 300px;
+  transition: 0.3s;
 }
 
-.campo {
-  flex: 1;              /* cada campo ocupa el mismo ancho */
+.testimonio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-.gif-esquina {
-  position: fixed;       /* se queda fijo aunque hagas scroll */
-  bottom: 20px;          /* distancia desde abajo */
-  right: 20px;           /* distancia desde la derecha */
-  width: 150px;          /* tamaño del gif */
-  height: auto;          /* mantiene proporción */
-  z-index: 1000;         /* se asegura de estar encima de otros elementos */
+.testimonio img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ffcc00;
 }
 
-
-
-/* Título */
-.contenedor h1 {
-  margin-bottom: 20px;
-  color: #9f3800;
-  padding: 10px;
+.testimonio p {
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
-/* Formulario en cuadrícula */
-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px; /* espacio entre elementos */
+.testimonio h4 {
+  color: #ffcc00;
+  margin-top: 10px;
 }
 
-/* Etiquetas alineadas */
-label {
-  text-align: left;
-  font-weight: bold;
-  color: #080303;
+/* ===== CONTACTO ===== */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Campos de entrada */
-input {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #030000;
-  border-radius: 6px;
-  margin-bottom: 20px; /* separa cada campo hacia abajo */
+.contacto input,
+.contacto textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 
-/* Botón */
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s ease;
+.contacto button {
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+.contacto button:hover {
+    background: #fff;
 }
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #000;
+    color: #aaa;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+

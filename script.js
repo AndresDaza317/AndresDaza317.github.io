@@ -50,3 +50,9 @@ function salir(){
     location.href = "index.html"
 }
 
+
+
+// Menú desplegable hamburguesa
+document.getElementById("menuToggle").addEventListener("click", function(){
+    document.getElementById("navMenu").classList.toggle("active");
+});

@@ -1,0 +1,228 @@
+/* ───────────────────────────────
+   VARIABLES GLOBALES DEL TEMA
+   ─────────────────────────────── */
+:root {
+  --bg-dark: #0d0f15;        /* Fondo general oscuro */
+  --card-dark: #151820;      /* Fondo de la tarjeta */
+
+  /* 🔥 Color principal NARANJA NEÓN */
+  --accent: #ff7a00;         /* Naranja principal */
+  --accent-light: #ff9b3c;   /* Naranja más claro para hover */
+
+  --muted: #8d93a1;          /* Gris suave para textos */
+  --text-light: #f2f4f7;     /* Texto casi blanco */
+  --radius: 14px;            /* Borde redondeado estándar */
+  --transition: 0.25s ease;  /* Animación por defecto */
+}
+
+/* Ajustamos box-sizing para evitar errores con paddings */
+* {
+  box-sizing: border-box;
+}
+
+/* ───────────────────────────────
+   ESTILOS GENERALES DEL BODY
+   ─────────────────────────────── */
+body {
+  font-family: 'Poppins', system-ui, sans-serif; /* Fuente moderna */
+  background: radial-gradient(circle at top, #1b1f29, #0d0f15 70%);
+  /* ➤ Fondo oscuro con un gradiente que ilumina la parte superior */
+
+  margin: 0;
+  min-height: 100vh;
+  display: flex;                  /* Centramos contenido */
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--text-light);       /* Texto blanco suave */
+}
+
+/* ───────────────────────────────
+   TARJETA DEL FORMULARIO
+   ─────────────────────────────── */
+.login-card {
+  width: 100%;
+  max-width: 420px;                    /* Tamaño máximo */
+  background: var(--card-dark);        /* Fondo gris oscuro */
+  padding: 32px;
+  border-radius: var(--radius);        /* Bordes redondeados */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Sombra profunda */
+  border: 1px solid rgba(255,255,255,0.06);   /* Borde sutil */
+  backdrop-filter: blur(6px);          /* Efecto glass */
+  animation: fadeIn 0.7s ease;         /* Entrada suave */
+}
+
+/* TÍTULO */
+.login-card h1 {
+  margin: 0 0 18px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--accent);                /* Naranja neón */
+  letter-spacing: 1px;                 /* Separación elegante */
+}
+
+/* ───────────────────────────────
+   CAMPOS DEL FORMULARIO
+   ─────────────────────────────── */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  color: var(--muted);                 /* Gris suave */
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);  /* Borde casi invisible */
+  border-radius: var(--radius);
+  background: #0f1116;                 /* Negro suave */
+  color: var(--text-light);            /* Texto blanco */
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+/* Estado focus del input */
+.field input:focus {
+  border-color: var(--accent);         /* Borde naranja neón */
+  box-shadow: 0 0 10px var(--accent);  /* Glow naranja */
+  outline: none;
+}
+
+/* ───────────────────────────────
+   CAMPO CONTRASEÑA + OJO
+   ─────────────────────────────── */
+/* Campo contraseña + botón del ojo */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 45px; /* Espacio para el botón del ojo */
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1116;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.password-wrapper button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-light);
+  z-index: 10; /* 👁️ Este es el fix importante */
+}
+
+
+
+/* ───────────────────────────────
+   ERRORES
+   ─────────────────────────────── */
+.error {
+  color: #ff4d4d;      /* Rojo vibrante para errores */
+  font-size: 0.85rem;
+  height: 18px;        /* Mantiene el espacio aunque no haya error */
+  margin-top: 6px;
+}
+
+/* ───────────────────────────────
+   OPCIONES (Recordarme, Olvidé mi contraseña)
+   ─────────────────────────────── */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ───────────────────────────────
+   BOTÓN PRINCIPAL
+   ─────────────────────────────── */
+.actions button {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 0;
+  background: var(--accent);     /* Fondo naranja */
+  color: #000;                   /* Negro para contraste */
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* Hover del botón principal */
+.actions button:hover {
+  background: var(--accent-light); /* Naranja más claro */
+  transform: translateY(-2px);    /* Efecto lift */
+  box-shadow: 0 6px 18px rgba(255, 122, 0, 0.45);
+}
+
+/* ───────────────────────────────
+   MENSAJES Y TEXTO INFERIOR
+   ─────────────────────────────── */
+.form-message {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  min-height: 20px; /* Para mantener un espacio fijo */
+}
+
+.signup-hint {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Enlaces del texto inferior */
+.signup-hint a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-hint a:hover {
+  color: var(--accent-light);
+}
+
+/* ───────────────────────────────
+   ANIMACIÓN DE ENTRADA
+   ─────────────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px); /* Baja */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);    /* En su sitio */
+  }
+}
+
+/* ───────────────────────────────
+   RESPONSIVE
+   ─────────────────────────────── */
+@media (max-width: 420px) {
+  .login-card {
+    padding: 22px; /* Reducimos padding en pantallas pequeñas */
+  }
+}
+
