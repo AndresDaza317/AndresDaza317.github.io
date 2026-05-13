@@ -1,28 +1,375 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-<table>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-</table>
-<script>
-    const table = document.querySelector("table");
-    for (let i = 1; i<= 10; i++) {
-        const fila  = document.createElement("tr");
-        const col1 = document.createElement("td");
-        const col2 = document.createElement("td");
-        col1.textContent = "2 * " +i
-        col2.textContent = 2 * i
-        fila.appendChild(col1);
-        fila.appendChild(col2);
-        table.appendChild(fila);
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,8,22,0.7);
+    backdrop-filter:blur(15px);
+    z-index:999;
+}
+
+.logo{
+    font-weight:800;
+    color:#8b5cf6;
+    letter-spacing:2px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#8b5cf6;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 10%;
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+    z-index:2;
+}
+
+.badge{
+    background:rgba(139,92,246,0.2);
+    border:1px solid rgba(139,92,246,0.4);
+    padding:10px 20px;
+    border-radius:30px;
+    color:#c4b5fd;
+    display:inline-block;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-size:5rem;
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:1.3rem;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.hero-buttons{
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+}
+
+.btn-primary,
+.btn-secondary{
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#8b5cf6;
+    color:white;
+}
+
+.btn-primary:hover{
+    transform:translateY(-5px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,0.2);
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:black;
+}
+
+.hero-glow{
+    width:600px;
+    height:600px;
+    background:#7c3aed;
+    filter:blur(150px);
+    position:absolute;
+    opacity:0.25;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:120px 10%;
+}
+
+.dark-section{
+    background:#0b1120;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title span{
+    color:#8b5cf6;
+    letter-spacing:2px;
+    font-size:0.9rem;
+}
+
+.section-title h2{
+    margin-top:15px;
+    font-size:3rem;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,0.04);
+    padding:35px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#8b5cf6;
+}
+
+.card h3{
+    margin:20px 0;
+    font-size:1.5rem;
+}
+
+.card p{
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.icon{
+    font-size:2rem;
+}
+
+.light{
+    background:#111827;
+}
+
+.warning{
+    background:#1e1b4b;
+}
+
+.future{
+    background:#111827;
+}
+
+/* GRID */
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.glass-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+}
+
+.glass-card h3{
+    margin-bottom:20px;
+}
+
+/* FORMULA */
+
+.formula-box{
+    margin-top:60px;
+    text-align:center;
+    background:#020617;
+    padding:30px;
+    border-radius:20px;
+    font-size:1.6rem;
+    color:#38bdf8;
+    overflow:auto;
+}
+
+/* TIMELINE */
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline-item{
+    display:flex;
+    gap:20px;
+    margin-bottom:40px;
+}
+
+.timeline-dot{
+    width:20px;
+    height:20px;
+    background:#8b5cf6;
+    border-radius:50%;
+    margin-top:10px;
+}
+
+.timeline-content{
+    background:#111827;
+    padding:25px;
+    border-radius:20px;
+    width:100%;
+}
+
+/* DEMO */
+
+.demo-box{
+    text-align:center;
+    background:#111827;
+    padding:50px;
+    border-radius:30px;
+}
+
+.demo-box p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+button{
+    padding:18px 35px;
+    border:none;
+    border-radius:15px;
+    background:#8b5cf6;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#7c3aed;
+}
+
+.generated-card{
+    margin-top:35px;
+    background:#0f172a;
+    padding:30px;
+    border-radius:20px;
+    line-height:2;
+    animation:fade 0.5s ease;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
     }
-</script>
-    
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* FINAL */
+
+.final-section{
+    text-align:center;
+}
+
+.final-section h2{
+    font-size:4rem;
+    margin-bottom:30px;
+}
+
+.final-section p{
+    max-width:800px;
+    margin:auto;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+
+.final-section h3{
+    margin-top:60px;
+    font-size:2rem;
+    color:#8b5cf6;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .navbar ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+}
 </body>
 </html>
