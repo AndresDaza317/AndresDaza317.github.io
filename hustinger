@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hostinger IA | Presentación</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar">
+    <div class="logo">HOSTINGER IA</div>
+
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#fundamentos">Fundamentos</a></li>
+      <li><a href="#ingenieria">Ingeniería</a></li>
+      <li><a href="#riesgos">Riesgos</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#impacto">Impacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+      <span class="badge">Inteligencia Artificial + Despliegue Web</span>
+
+      <h1>
+        Hostinger y la IA aplicada
+        al despliegue web
+      </h1>
+
+      <p>
+        Cómo la inteligencia artificial está transformando
+        el desarrollo, automatización y administración de sitios web.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#fundamentos" class="btn-primary">Comenzar</a>
+        <a href="#demo" class="btn-secondary">Ver Demo</a>
+      </div>
+
+    </div>
+
+    <div class="hero-glow"></div>
+
+  </section>
+
+  <!-- QUE ES -->
+
+  <section class="section">
+
+    <div class="section-title">
+      <span>INTRODUCCIÓN</span>
+      <h2>¿Qué es Hostinger?</h2>
+    </div>
+
+    <div class="grid-2">
+
+      <div class="glass-card">
+        <h3>Plataforma de Hosting</h3>
+
+        <p>
+          Hostinger es una plataforma moderna de alojamiento web
+          que integra herramientas de inteligencia artificial.
+        </p>
+      </div>
+
+      <div class="glass-card">
+        <h3>Automatización IA</h3>
+
+        <p>
+          Permite crear sitios web, optimizar rendimiento,
+          generar contenido y automatizar tareas técnicas.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FUNDAMENTOS -->
+
+  <section class="section dark-section" id="fundamentos">
+
+    <div class="section-title">
+      <span>ARQUITECTURA</span>
+      <h2>Fundamentos de la IA</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>Transformers</h3>
+
+        <p>
+          Modelos similares a ChatGPT que entienden lenguaje humano
+          y generan contenido automáticamente.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Deep Learning</h3>
+
+        <p>
+          Redes neuronales entrenadas con millones de datos web.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💬</div>
+        <h3>NLP</h3>
+
+        <p>
+          Procesamiento de lenguaje natural para interpretar instrucciones.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="formula-box">
+      Attention(Q,K,V)=softmax((QKᵀ)/√dk)V
+    </div>
+
+  </section>
+
+  <!-- INGENIERIA -->
+
+  <section class="section" id="ingenieria">
+
+    <div class="section-title">
+      <span>INGENIERÍA</span>
+      <h2>Aplicación en Ingeniería</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card light">
+        <h3>Automatización</h3>
+
+        <p>
+          Reduce tiempo en despliegues y configuraciones manuales.
+        </p>
+      </div>
+
+      <div class="card light">
+        <h3>Optimización</h3>
+
+        <p>
+          Mejora velocidad, caché y rendimiento automáticamente.
+        </p>
+      </div>
+
+      <div class="card light">
+        <h3>Seguridad</h3>
+
+        <p>
+          Detecta errores y ayuda a prevenir vulnerabilidades.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROCESOS -->
+
+  <section class="section dark-section">
+
+    <div class="section-title">
+      <span>PROCESOS TÉCNICOS</span>
+      <h2>Automatización Inteligente</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h3>Análisis de Tráfico</h3>
+          <p>La IA analiza visitantes y carga del servidor.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h3>Optimización</h3>
+          <p>Mejora automáticamente el rendimiento web.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <h3>Escalabilidad</h3>
+          <p>Distribuye recursos según demanda.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LIMITACIONES -->
+
+  <section class="section" id="riesgos">
+
+    <div class="section-title">
+      <span>RIESGOS</span>
+      <h2>Limitaciones de la IA</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card warning">
+        <h3>Alucinaciones</h3>
+
+        <p>
+          La IA puede generar configuraciones incorrectas.
+        </p>
+      </div>
+
+      <div class="card warning">
+        <h3>Sesgos</h3>
+
+        <p>
+          Los resultados dependen de los datos de entrenamiento.
+        </p>
+      </div>
+
+      <div class="card warning">
+        <h3>Dependencia</h3>
+
+        <p>
+          Automatizar demasiado puede reducir comprensión técnica.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- DEMO -->
+
+  <section class="section dark-section" id="demo">
+
+    <div class="section-title">
+      <span>LIVE DEMO</span>
+      <h2>Demostración Práctica</h2>
+    </div>
+
+    <div class="demo-box">
+
+      <p>
+        Simulación de creación automática de una página web
+        utilizando inteligencia artificial.
+      </p>
+
+      <button onclick="generarDemo()">
+        Generar Página con IA
+      </button>
+
+      <div id="resultado-demo"></div>
+
+    </div>
+
+  </section>
+
+  <!-- IMPACTO -->
+
+  <section class="section" id="impacto">
+
+    <div class="section-title">
+      <span>FUTURO</span>
+      <h2>Impacto Ético y Profesional</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card future">
+        <h3>Nuevos Roles</h3>
+
+        <p>
+          Los ingenieros se enfocarán más en arquitectura y supervisión.
+        </p>
+      </div>
+
+      <div class="card future">
+        <h3>Automatización</h3>
+
+        <p>
+          Muchas tareas repetitivas serán reemplazadas por IA.
+        </p>
+      </div>
+
+      <div class="card future">
+        <h3>Supervisión Humana</h3>
+
+        <p>
+          La validación humana seguirá siendo esencial.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONCLUSION -->
+
+  <section class="section final-section">
+
+    <h2>Conclusiones</h2>
+
+    <p>
+      Hostinger demuestra cómo la inteligencia artificial puede
+      transformar el despliegue web mediante automatización,
+      optimización y asistencia inteligente.
+    </p>
+
+    <h3>Gracias</h3>
+
+    <span>¿Preguntas?</span>
+
+  </section>
+
+  <script>
+
+    function generarDemo(){
+
+      const demo = document.getElementById("resultado-demo");
+
+      demo.innerHTML = `
+        <div class="generated-card">
+          ✅ Sitio generado automáticamente<br><br>
+          • Diseño responsive<br>
+          • Optimización SEO<br>
+          • Configuración automática<br>
+          • Integración IA completada
+        </div>
+      `;
+    }
+
+  </script>
+
+</body>
+</html>
